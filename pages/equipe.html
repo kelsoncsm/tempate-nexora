@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuários e Equipe · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="equipe">
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">N</span>
+      <div class="sidebar-brand-text"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <span class="nav-label">Principal</span>
+        <a class="nav-item" data-page="dashboard" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span class="nav-text">Visão Geral</span></a>
+        <a class="nav-item" data-page="agenda" href="agenda.html"><i class="fa-regular fa-calendar-days"></i><span class="nav-text">Agenda</span></a>
+        <a class="nav-item" data-page="clientes" href="clientes.html"><i class="fa-solid fa-user-group"></i><span class="nav-text">Clientes</span></a>
+        <a class="nav-item" data-page="profissionais" href="profissionais.html"><i class="fa-solid fa-user-tie"></i><span class="nav-text">Profissionais</span></a>
+        <a class="nav-item" data-page="servicos" href="servicos.html"><i class="fa-solid fa-scissors"></i><span class="nav-text">Serviços</span></a>
+        <a class="nav-item" data-page="relatorios" href="relatorios.html"><i class="fa-solid fa-chart-column"></i><span class="nav-text">Relatórios</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Gestão</span>
+        <a class="nav-item" data-page="equipe" href="equipe.html"><i class="fa-solid fa-users-gear"></i><span class="nav-text">Usuários e Equipe</span></a>
+        <a class="nav-item" data-page="assinatura" href="assinatura.html"><i class="fa-solid fa-credit-card"></i><span class="nav-text">Plano e Assinatura</span></a>
+        <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Configurações</span>
+        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
+        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
+        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Conta</span>
+        <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Plataforma</span>
+        <a class="nav-item" data-page="admin" href="admin.html"><i class="fa-solid fa-gauge"></i><span class="nav-text">Painel Admin</span></a>
+        <a class="nav-item" data-page="admin-assinaturas" href="admin-assinaturas.html"><i class="fa-solid fa-rotate"></i><span class="nav-text">Assinaturas</span></a>
+        <a class="nav-item" data-page="admin-billing" href="admin-billing.html"><i class="fa-solid fa-file-invoice-dollar"></i><span class="nav-text">Preços e Invoices</span></a>
+        <a class="nav-item" data-page="admin-relatorios" href="admin-relatorios.html"><i class="fa-solid fa-chart-pie"></i><span class="nav-text">Relatórios da plataforma</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="plan-mini-card">
+        <div class="plan-mini-head"><i class="fa-solid fa-crown text-primary"></i> Plano Professional <span class="tag">PRO</span></div>
+        <div class="meter"><span style="width:53%"></span></div>
+        <small>8 de 15 módulos ativos</small>
+        <a href="assinatura.html" class="btn btn-primary btn-sm btn-block">Gerenciar plano</a>
+      </div>
+      <a class="tenant-switcher" href="selecionar-empresa.html">
+        <span class="brand-mark">CS</span>
+        <span><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" data-action="toggle-sidebar" aria-label="Alternar menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass lead"></i>
+        <input type="text" placeholder="Buscar clientes, atendimentos, agendamentos…" aria-label="Buscar">
+        <span class="kbd">Ctrl K</span>
+      </div>
+      <div class="topbar-right">
+        <a href="selecionar-empresa.html" class="topbar-tenant">
+          <span class="brand-mark">CS</span>
+          <span class="who"><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <button class="topbar-icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i><span class="count">5</span></button>
+        <button class="topbar-icon-btn" aria-label="Ajuda"><i class="fa-regular fa-circle-question"></i></button>
+        <div class="dropdown">
+          <button class="topbar-user" data-dropdown-toggle="userMenu">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Perfil">
+            <span class="who"><strong>Kelson Silva</strong><span>Administrador</span></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" id="userMenu">
+            <a href="perfil.html"><i class="fa-regular fa-user"></i> Meu perfil</a>
+            <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-body">
+
+      <div class="page-header">
+        <div><h1>Usuários e Equipe</h1><p>Gerencie quem tem acesso a esta empresa.</p></div>
+        <div class="actions"><button class="btn btn-primary" data-modal-open="modalConvite"><i class="fa-solid fa-plus"></i> Incluir usuário</button></div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="list-toolbar">
+          <div class="search-input input-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i><input type="text" class="form-control" placeholder="Buscar por e-mail" data-table-search="#tblMembros"></div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="tblMembros">
+            <thead><tr><th>Usuário</th><th>Papel</th><th>Status</th><th><span class="sr-only">Ações</span></th></tr></thead>
+            <tbody>
+              <tr>
+                <td data-label="Usuário"><span class="table-person"><span class="avatar-initials">KS</span>kelson@clinicasorriso.com.br</span></td>
+                <td data-label="Papel"><select class="form-control select-control"><option>ADMIN</option><option>Gerente</option><option>Recepção</option></select></td>
+                <td data-label="Status"><span class="badge badge-success">Ativo</span></td>
+                <td class="actions"><span class="text-muted" style="font-size:var(--fs-xs);">você</span></td>
+              </tr>
+              <tr>
+                <td data-label="Usuário"><span class="table-person"><span class="avatar-initials">RC</span>recepcao@clinicasorriso.com.br</span></td>
+                <td data-label="Papel"><select class="form-control select-control"><option>Recepção</option><option>Gerente</option><option>ADMIN</option></select></td>
+                <td data-label="Status"><span class="badge badge-success">Ativo</span></td>
+                <td class="actions"><button class="btn-icon-circle danger" data-modal-open="modalDesativar" aria-label="Desativar acesso"><i class="fa-solid fa-right-from-bracket"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="Usuário"><span class="table-person"><span class="avatar-initials">GF</span>gerente@clinicasorriso.com.br</span></td>
+                <td data-label="Papel"><select class="form-control select-control"><option>Gerente</option><option>Recepção</option><option>ADMIN</option></select></td>
+                <td data-label="Status"><span class="badge badge-danger">Inativo</span></td>
+                <td class="actions"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="count-hint">Alterar papel exige <b>tenant.members.update</b>; desativar acesso, <b>tenant.members.delete</b>; convidar, <b>tenant.members.create</b>.</p>
+      </div>
+
+      <h2 class="section-title">Convites pendentes</h2>
+      <div class="card">
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>E-mail</th><th>Papel</th><th>Status</th><th>Convidado por</th><th>Expira</th><th><span class="sr-only">Ações</span></th></tr></thead>
+            <tbody>
+              <tr>
+                <td data-label="E-mail"><span class="table-person"><span class="avatar-initials">NF</span>novo.func@email.com</span></td>
+                <td data-label="Papel"><span class="badge badge-neutral">Recepção</span></td>
+                <td data-label="Status"><span class="badge badge-info">Pendente</span></td>
+                <td data-label="Convidado por">kelson@clinicasorriso.com.br</td>
+                <td data-label="Expira">18/09/2026</td>
+                <td class="actions"><button class="btn-icon-circle" aria-label="Reenviar"><i class="fa-solid fa-rotate-right"></i></button><button class="btn-icon-circle danger" data-modal-open="modalCancelarConvite" aria-label="Cancelar"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="E-mail"><span class="table-person"><span class="avatar-initials">AA</span>antigo.aux@email.com</span></td>
+                <td data-label="Papel"><span class="badge badge-neutral">Gerente</span></td>
+                <td data-label="Status"><span class="badge badge-danger">Expirado</span></td>
+                <td data-label="Convidado por">kelson@clinicasorriso.com.br</td>
+                <td data-label="Expira">02/09/2026</td>
+                <td class="actions"><button class="btn-icon-circle" aria-label="Reenviar"><i class="fa-solid fa-rotate-right"></i></button><button class="btn-icon-circle danger" data-modal-open="modalCancelarConvite" aria-label="Cancelar"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="count-hint">Reenviar gera um novo link e invalida o anterior. Cancelar impede o aceite.</p>
+      </div>
+
+      <div class="modal-overlay" id="modalConvite">
+        <div class="modal-box" style="max-width:440px;">
+          <div class="modal-header"><h3>Incluir usuário</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-group"><label class="form-label">E-mail</label><input class="form-control" type="email" placeholder="pessoa@empresa.com"></div>
+            <div class="form-group"><label class="form-label">Papel</label><select class="form-control"><option>Recepção</option><option>Gerente</option></select><p class="form-hint">Só aparecem os papéis que você tem autoridade para conceder.</p></div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Enviar convite</button></div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalDesativar">
+        <div class="modal-box" style="max-width:420px;">
+          <div class="modal-header"><h3>Desativar acesso?</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body"><p>O usuário perderá o acesso a esta empresa imediatamente.</p></div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-danger" data-modal-close>Desativar acesso</button></div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalCancelarConvite">
+        <div class="modal-box" style="max-width:420px;">
+          <div class="modal-header"><h3>Cancelar convite?</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body"><p>O link enviado deixará de funcionar.</p></div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Voltar</button><button class="btn btn-danger" data-modal-close>Cancelar convite</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

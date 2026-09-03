@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="agenda">
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">N</span>
+      <div class="sidebar-brand-text"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <span class="nav-label">Principal</span>
+        <a class="nav-item" data-page="dashboard" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span class="nav-text">Visão Geral</span></a>
+        <a class="nav-item" data-page="agenda" href="agenda.html"><i class="fa-regular fa-calendar-days"></i><span class="nav-text">Agenda</span></a>
+        <a class="nav-item" data-page="clientes" href="clientes.html"><i class="fa-solid fa-user-group"></i><span class="nav-text">Clientes</span></a>
+        <a class="nav-item" data-page="profissionais" href="profissionais.html"><i class="fa-solid fa-user-tie"></i><span class="nav-text">Profissionais</span></a>
+        <a class="nav-item" data-page="servicos" href="servicos.html"><i class="fa-solid fa-scissors"></i><span class="nav-text">Serviços</span></a>
+        <a class="nav-item" data-page="relatorios" href="relatorios.html"><i class="fa-solid fa-chart-column"></i><span class="nav-text">Relatórios</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Gestão</span>
+        <a class="nav-item" data-page="equipe" href="equipe.html"><i class="fa-solid fa-users-gear"></i><span class="nav-text">Usuários e Equipe</span></a>
+        <a class="nav-item" data-page="assinatura" href="assinatura.html"><i class="fa-solid fa-credit-card"></i><span class="nav-text">Plano e Assinatura</span></a>
+        <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Configurações</span>
+        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
+        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
+        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Conta</span>
+        <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Plataforma</span>
+        <a class="nav-item" data-page="admin" href="admin.html"><i class="fa-solid fa-gauge"></i><span class="nav-text">Painel Admin</span></a>
+        <a class="nav-item" data-page="admin-assinaturas" href="admin-assinaturas.html"><i class="fa-solid fa-rotate"></i><span class="nav-text">Assinaturas</span></a>
+        <a class="nav-item" data-page="admin-billing" href="admin-billing.html"><i class="fa-solid fa-file-invoice-dollar"></i><span class="nav-text">Preços e Invoices</span></a>
+        <a class="nav-item" data-page="admin-relatorios" href="admin-relatorios.html"><i class="fa-solid fa-chart-pie"></i><span class="nav-text">Relatórios da plataforma</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="plan-mini-card">
+        <div class="plan-mini-head"><i class="fa-solid fa-crown text-primary"></i> Plano Professional <span class="tag">PRO</span></div>
+        <div class="meter"><span style="width:53%"></span></div>
+        <small>8 de 15 módulos ativos</small>
+        <a href="assinatura.html" class="btn btn-primary btn-sm btn-block">Gerenciar plano</a>
+      </div>
+      <a class="tenant-switcher" href="selecionar-empresa.html">
+        <span class="brand-mark">CS</span>
+        <span><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" data-action="toggle-sidebar" aria-label="Alternar menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass lead"></i>
+        <input type="text" placeholder="Buscar clientes, atendimentos, agendamentos…" aria-label="Buscar">
+        <span class="kbd">Ctrl K</span>
+      </div>
+      <div class="topbar-right">
+        <a href="selecionar-empresa.html" class="topbar-tenant">
+          <span class="brand-mark">CS</span>
+          <span class="who"><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <button class="topbar-icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i><span class="count">5</span></button>
+        <button class="topbar-icon-btn" aria-label="Ajuda"><i class="fa-regular fa-circle-question"></i></button>
+        <div class="dropdown">
+          <button class="topbar-user" data-dropdown-toggle="userMenu">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Perfil">
+            <span class="who"><strong>Kelson Silva</strong><span>Administrador</span></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" id="userMenu">
+            <a href="perfil.html"><i class="fa-regular fa-user"></i> Meu perfil</a>
+            <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-body">
+
+      <div class="page-header">
+        <div><h1>Agenda</h1><p>Visualize e gerencie seus agendamentos · fuso America/Sao_Paulo</p></div>
+        <div class="actions">
+          <button class="btn btn-secondary" data-modal-open="modalHorario">Disponibilidade</button>
+          <button class="btn btn-secondary" data-modal-open="modalBloqueio">Bloqueio</button>
+          <button class="btn btn-primary" data-modal-open="modalAgendamento"><i class="fa-solid fa-plus"></i> Novo agendamento</button>
+        </div>
+      </div>
+
+      <div class="agenda-toolbar">
+        <div class="agenda-nav">
+          <button aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="btn btn-secondary btn-sm">Hoje</button>
+          <input class="form-control" type="date" value="2026-09-15" style="width:auto;">
+          <strong style="font-size:var(--fs-sm);">15 a 18 de Setembro, 2026</strong>
+        </div>
+        <div class="view-switch"><button>Dia</button><button class="active">Semana</button></div>
+      </div>
+
+      <div class="table-wrap">
+        <div class="agenda-grid">
+        <div class="agenda-col-header corner"></div>
+        <div class="agenda-col-header">Seg 15/09</div>
+        <div class="agenda-col-header">Ter 16/09</div>
+        <div class="agenda-col-header">Qua 17/09</div>
+        <div class="agenda-col-header">Qui 18/09</div>
+        <div class="agenda-time-col">
+          <div class="agenda-time-cell">08:00</div>
+          <div class="agenda-time-cell">09:00</div>
+          <div class="agenda-time-cell">10:00</div>
+          <div class="agenda-time-cell">11:00</div>
+          <div class="agenda-time-cell">13:00</div>
+          <div class="agenda-time-cell">14:00</div>
+          <div class="agenda-time-cell">15:00</div>
+          <div class="agenda-time-cell">16:00</div>
+        </div>
+        <div class="agenda-day-col">
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-a"><strong>Ana Clara Souza</strong><span>Corte + barba</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-a"><strong>Patrícia Lima</strong><span>Coloração</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+        </div>
+        <div class="agenda-day-col">
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-b"><strong>João Pedro</strong><span>Corte masculino</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-b"><strong>Camila Ferreira</strong><span>Escova</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+        </div>
+        <div class="agenda-day-col">
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-c"><strong>Juliana Mendes</strong><span>Progressiva</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-c"><strong>Lucas Martins</strong><span>Corte</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+        </div>
+        <div class="agenda-day-col">
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-d"><strong>Pedro Henrique</strong><span>Barba</span></a></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"></div>
+          <div class="agenda-slot"><a href="agenda.html" class="appt-block tone-d"><strong>Amanda Silva</strong><span>Hidratação</span></a></div>
+          <div class="agenda-slot"></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalAgendamento">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Novo agendamento</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Cliente</label><select class="form-control"><option>Ana Clara Souza</option><option>João Pedro Oliveira</option><option>Juliana Mendes</option></select></div>
+              <div class="form-group"><label class="form-label">Profissional</label><select class="form-control"><option>Marina Silva</option><option>Carlos Eduardo</option></select></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Serviço</label><select class="form-control"><option>Corte + barba</option><option>Coloração</option><option>Escova</option></select></div>
+              <div class="form-group"><label class="form-label">Início</label><input class="form-control" type="datetime-local" value="2026-09-15T14:00"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Observações</label><textarea class="form-control" placeholder="Opcional"></textarea></div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Salvar</button></div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalHorario">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Horário recorrente</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Profissional</label><select class="form-control"><option>Marina Silva</option></select></div>
+              <div class="form-group"><label class="form-label">Dia da semana</label><select class="form-control"><option>Segunda</option><option>Terça</option><option>Quarta</option></select></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Início</label><input class="form-control" type="time" value="09:00"></div>
+              <div class="form-group"><label class="form-label">Fim</label><input class="form-control" type="time" value="18:00"></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Salvar disponibilidade</button></div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalBloqueio">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Bloquear agenda</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Profissional</label><select class="form-control"><option>Marina Silva</option></select></div>
+              <div class="form-group"><label class="form-label">Motivo</label><input class="form-control" placeholder="Opcional"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Início</label><input class="form-control" type="datetime-local"></div>
+              <div class="form-group"><label class="form-label">Fim</label><input class="form-control" type="datetime-local"></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Criar bloqueio</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

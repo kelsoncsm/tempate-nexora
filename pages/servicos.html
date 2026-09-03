@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviços · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="servicos">
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">N</span>
+      <div class="sidebar-brand-text"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <span class="nav-label">Principal</span>
+        <a class="nav-item" data-page="dashboard" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span class="nav-text">Visão Geral</span></a>
+        <a class="nav-item" data-page="agenda" href="agenda.html"><i class="fa-regular fa-calendar-days"></i><span class="nav-text">Agenda</span></a>
+        <a class="nav-item" data-page="clientes" href="clientes.html"><i class="fa-solid fa-user-group"></i><span class="nav-text">Clientes</span></a>
+        <a class="nav-item" data-page="profissionais" href="profissionais.html"><i class="fa-solid fa-user-tie"></i><span class="nav-text">Profissionais</span></a>
+        <a class="nav-item" data-page="servicos" href="servicos.html"><i class="fa-solid fa-scissors"></i><span class="nav-text">Serviços</span></a>
+        <a class="nav-item" data-page="relatorios" href="relatorios.html"><i class="fa-solid fa-chart-column"></i><span class="nav-text">Relatórios</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Gestão</span>
+        <a class="nav-item" data-page="equipe" href="equipe.html"><i class="fa-solid fa-users-gear"></i><span class="nav-text">Usuários e Equipe</span></a>
+        <a class="nav-item" data-page="assinatura" href="assinatura.html"><i class="fa-solid fa-credit-card"></i><span class="nav-text">Plano e Assinatura</span></a>
+        <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Configurações</span>
+        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
+        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
+        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Conta</span>
+        <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Plataforma</span>
+        <a class="nav-item" data-page="admin" href="admin.html"><i class="fa-solid fa-gauge"></i><span class="nav-text">Painel Admin</span></a>
+        <a class="nav-item" data-page="admin-assinaturas" href="admin-assinaturas.html"><i class="fa-solid fa-rotate"></i><span class="nav-text">Assinaturas</span></a>
+        <a class="nav-item" data-page="admin-billing" href="admin-billing.html"><i class="fa-solid fa-file-invoice-dollar"></i><span class="nav-text">Preços e Invoices</span></a>
+        <a class="nav-item" data-page="admin-relatorios" href="admin-relatorios.html"><i class="fa-solid fa-chart-pie"></i><span class="nav-text">Relatórios da plataforma</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="plan-mini-card">
+        <div class="plan-mini-head"><i class="fa-solid fa-crown text-primary"></i> Plano Professional <span class="tag">PRO</span></div>
+        <div class="meter"><span style="width:53%"></span></div>
+        <small>8 de 15 módulos ativos</small>
+        <a href="assinatura.html" class="btn btn-primary btn-sm btn-block">Gerenciar plano</a>
+      </div>
+      <a class="tenant-switcher" href="selecionar-empresa.html">
+        <span class="brand-mark">CS</span>
+        <span><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" data-action="toggle-sidebar" aria-label="Alternar menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass lead"></i>
+        <input type="text" placeholder="Buscar clientes, atendimentos, agendamentos…" aria-label="Buscar">
+        <span class="kbd">Ctrl K</span>
+      </div>
+      <div class="topbar-right">
+        <a href="selecionar-empresa.html" class="topbar-tenant">
+          <span class="brand-mark">CS</span>
+          <span class="who"><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <button class="topbar-icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i><span class="count">5</span></button>
+        <button class="topbar-icon-btn" aria-label="Ajuda"><i class="fa-regular fa-circle-question"></i></button>
+        <div class="dropdown">
+          <button class="topbar-user" data-dropdown-toggle="userMenu">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Perfil">
+            <span class="who"><strong>Kelson Silva</strong><span>Administrador</span></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" id="userMenu">
+            <a href="perfil.html"><i class="fa-regular fa-user"></i> Meu perfil</a>
+            <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-body">
+
+      <div class="page-header">
+        <div><h1>Serviços</h1><p>Defina duração e preço de cada atendimento.</p></div>
+        <div class="actions"><button class="btn btn-primary" data-modal-open="modalServico"><i class="fa-solid fa-plus"></i> Novo serviço</button></div>
+      </div>
+
+      <div class="card">
+        <div class="list-toolbar">
+          <div class="search-input input-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i><input type="text" class="form-control" placeholder="Buscar serviço" data-table-search="#tblSvc"></div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="tblSvc">
+            <thead><tr><th>Serviço</th><th>Duração / preço</th><th><span class="sr-only">Ações</span></th></tr></thead>
+            <tbody>
+              <tr>
+                <td data-label="Serviço"><strong>Corte feminino</strong><br><span class="text-muted">Corte + finalização</span></td>
+                <td data-label="Duração / preço">60 min · R$ 90,00</td>
+                <td class="actions"><button class="btn-icon-circle" data-modal-open="modalServico" aria-label="Editar"><i class="fa-solid fa-pen"></i></button><button class="btn-icon-circle danger" data-modal-open="modalExcluirServico" aria-label="Excluir"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Corte masculino</strong><br><span class="text-muted">Corte na tesoura ou máquina</span></td>
+                <td data-label="Duração / preço">30 min · R$ 50,00</td>
+                <td class="actions"><button class="btn-icon-circle" data-modal-open="modalServico" aria-label="Editar"><i class="fa-solid fa-pen"></i></button><button class="btn-icon-circle danger" data-modal-open="modalExcluirServico" aria-label="Excluir"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Coloração</strong><br><span class="text-muted">Tintura raiz e comprimento</span></td>
+                <td data-label="Duração / preço">120 min · R$ 180,00</td>
+                <td class="actions"><button class="btn-icon-circle" data-modal-open="modalServico" aria-label="Editar"><i class="fa-solid fa-pen"></i></button><button class="btn-icon-circle danger" data-modal-open="modalExcluirServico" aria-label="Excluir"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Escova</strong><br><span class="text-muted">Escova modeladora</span></td>
+                <td data-label="Duração / preço">45 min · R$ 60,00</td>
+                <td class="actions"><button class="btn-icon-circle" data-modal-open="modalServico" aria-label="Editar"><i class="fa-solid fa-pen"></i></button><button class="btn-icon-circle danger" data-modal-open="modalExcluirServico" aria-label="Excluir"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+              <tr>
+                <td data-label="Serviço"><strong>Barba</strong><br><span class="text-muted">Barba com toalha quente</span></td>
+                <td data-label="Duração / preço">30 min · R$ 40,00</td>
+                <td class="actions"><button class="btn-icon-circle" data-modal-open="modalServico" aria-label="Editar"><i class="fa-solid fa-pen"></i></button><button class="btn-icon-circle danger" data-modal-open="modalExcluirServico" aria-label="Excluir"><i class="fa-regular fa-trash-can"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalServico">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Novo serviço</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-group"><label class="form-label">Nome</label><input class="form-control" placeholder="Nome"></div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Duração (min)</label><input class="form-control" type="number" placeholder="30"></div>
+              <div class="form-group"><label class="form-label">Preço (R$)</label><input class="form-control" type="number" step="0.01" placeholder="0,00"></div>
+            </div>
+            <div class="form-group"><label class="form-label">Descrição</label><input class="form-control" placeholder="Descrição breve"></div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Salvar</button></div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modalExcluirServico">
+        <div class="modal-box" style="max-width:420px;">
+          <div class="modal-header"><h3>Excluir serviço?</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body"><p>Esta ação não pode ser desfeita.</p></div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-danger" data-modal-close>Excluir</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

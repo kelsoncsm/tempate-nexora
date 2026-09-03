@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuração da vertical · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="config-inicial">
+
+  <main class="wizard-shell">
+    <header>
+      <span class="eyebrow">Barbearia / Salão</span>
+      <h1>Serviços iniciais</h1>
+      <p>Todos são opcionais. Ao selecionar um item, informe os valores praticados pela sua empresa.</p>
+    </header>
+
+    <section class="wizard-card">
+      <div class="stack">
+        <div class="card-flat">
+          <label class="checkbox-row" style="font-size:var(--fs-md); color:var(--color-text); font-weight:600;"><input type="checkbox" checked> Corte masculino <span class="text-muted" style="font-weight:400;">· Cabelo</span></label>
+          <div class="form-row mt-3">
+            <div class="form-group" style="margin-bottom:0;"><label class="form-label">Duração (min)</label><input class="form-control" type="number" value="30"></div>
+            <div class="form-group" style="margin-bottom:0;"><label class="form-label">Preço</label><input class="form-control" type="number" step="0.01" value="50.00"></div>
+          </div>
+        </div>
+        <div class="card-flat">
+          <label class="checkbox-row" style="font-size:var(--fs-md); color:var(--color-text); font-weight:600;"><input type="checkbox" checked> Barba <span class="text-muted" style="font-weight:400;">· Barba</span></label>
+          <div class="form-row mt-3">
+            <div class="form-group" style="margin-bottom:0;"><label class="form-label">Duração (min)</label><input class="form-control" type="number" value="20"></div>
+            <div class="form-group" style="margin-bottom:0;"><label class="form-label">Preço</label><input class="form-control" type="number" step="0.01" value="35.00"></div>
+          </div>
+        </div>
+        <div class="card-flat">
+          <label class="checkbox-row" style="font-size:var(--fs-md); color:var(--color-text); font-weight:600;"><input type="checkbox"> Coloração <span class="text-muted" style="font-weight:400;">· Química</span></label>
+        </div>
+        <div class="card-flat">
+          <label class="checkbox-row" style="font-size:var(--fs-md); color:var(--color-text); font-weight:600;"><input type="checkbox"> Escova <span class="text-muted" style="font-weight:400;">· Finalização</span></label>
+        </div>
+      </div>
+
+      <footer>
+        <a class="btn btn-secondary" href="dashboard.html">Configurar depois</a>
+        <span class="spacer"></span>
+        <a class="btn btn-primary" href="dashboard.html">Iniciar operação</a>
+      </footer>
+    </section>
+  </main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

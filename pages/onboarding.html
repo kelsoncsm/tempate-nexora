@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuração inicial · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="onboarding">
+
+  <main class="wizard-shell" data-wizard>
+    <header>
+      <span class="eyebrow">Configuração inicial</span>
+      <h1>Vamos preparar sua empresa</h1>
+      <p>5 passos · seu progresso é salvo automaticamente.</p>
+    </header>
+
+    <ol class="wizard-steps">
+      <li class="active">1</li><li>2</li><li>3</li><li>4</li><li>5</li>
+    </ol>
+
+    <section class="wizard-card" data-step>
+      <h2>Sua empresa</h2>
+      <div class="form-group"><label class="form-label">Nome da empresa</label><input class="form-control" placeholder="Minha Empresa"></div>
+      <div class="form-group"><label class="form-label">Slug para acesso</label><input class="form-control" placeholder="minha-empresa"></div>
+      <footer><span class="spacer"></span><button class="btn btn-primary" data-wizard-next>Continuar</button></footer>
+    </section>
+
+    <section class="wizard-card" data-step style="display:none;">
+      <h2>Segmento</h2>
+      <p class="text-muted" style="font-size:var(--fs-sm);">Isso personaliza a configuração inicial, sem limitar seus recursos.</p>
+      <div class="choices">
+        <button type="button" class="choice selected"><b>Barbearia / Salão</b><small>BARBERSHOP_SALON</small></button>
+        <button type="button" class="choice"><b>Clínica</b><small>CLINIC</small></button>
+        <button type="button" class="choice"><b>Estúdio</b><small>STUDIO</small></button>
+        <button type="button" class="choice"><b>Genérico</b><small>GENERIC</small></button>
+      </div>
+      <footer><button class="btn btn-secondary" data-wizard-prev>Voltar</button><span class="spacer"></span><button class="btn btn-primary" data-wizard-next>Continuar</button></footer>
+    </section>
+
+    <section class="wizard-card" data-step style="display:none;">
+      <h2>Plano e cobrança futura</h2>
+      <p class="text-muted" style="font-size:var(--fs-sm);">O teste gratuito dura 14 dias. Nenhuma cobrança é feita agora.</p>
+      <div class="choices">
+        <button type="button" class="choice selected"><b>Básico</b><span>R$ 49,90 / mês</span><small>REPORTS, CUSTOMERS, SCHEDULING</small></button>
+        <button type="button" class="choice"><b>Professional</b><span>R$ 129,90 / mês</span><small>Tudo do Básico + PROFESSIONALS, SERVICES</small></button>
+      </div>
+      <footer><button class="btn btn-secondary" data-wizard-prev>Voltar</button><span class="spacer"></span><button class="btn btn-primary" data-wizard-next>Continuar</button></footer>
+    </section>
+
+    <section class="wizard-card" data-step style="display:none;">
+      <h2>Fuso horário</h2>
+      <div class="form-group"><label class="form-label">Identificador IANA</label><input class="form-control" value="America/Sao_Paulo"></div>
+      <p class="text-muted" style="font-size:var(--fs-sm);">Usaremos este fuso em agenda, relatórios e comunicações.</p>
+      <footer><button class="btn btn-secondary" data-wizard-prev>Voltar</button><span class="spacer"></span><button class="btn btn-primary" data-wizard-next>Continuar</button></footer>
+    </section>
+
+    <section class="wizard-card" data-step style="display:none;">
+      <h2>Confirmar</h2>
+      <div class="defs">
+        <dt>Empresa</dt><dd>Minha Empresa</dd>
+        <dt>Endereço</dt><dd>/t/minha-empresa</dd>
+        <dt>Segmento</dt><dd>Barbearia / Salão</dd>
+        <dt>Plano</dt><dd>Básico · Mensal</dd>
+        <dt>Fuso</dt><dd>America/Sao_Paulo</dd>
+      </div>
+      <p class="text-muted mt-3" style="font-size:var(--fs-sm);">Ao confirmar, criaremos sua empresa e iniciaremos o trial de 14 dias.</p>
+      <footer><button class="btn btn-secondary" data-wizard-prev>Voltar</button><span class="spacer"></span><a class="btn btn-primary" href="configuracao-inicial.html">Criar minha empresa</a></footer>
+    </section>
+  </main>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

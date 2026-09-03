@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visão Geral · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="dashboard">
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">N</span>
+      <div class="sidebar-brand-text"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <span class="nav-label">Principal</span>
+        <a class="nav-item" data-page="dashboard" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span class="nav-text">Visão Geral</span></a>
+        <a class="nav-item" data-page="agenda" href="agenda.html"><i class="fa-regular fa-calendar-days"></i><span class="nav-text">Agenda</span></a>
+        <a class="nav-item" data-page="clientes" href="clientes.html"><i class="fa-solid fa-user-group"></i><span class="nav-text">Clientes</span></a>
+        <a class="nav-item" data-page="profissionais" href="profissionais.html"><i class="fa-solid fa-user-tie"></i><span class="nav-text">Profissionais</span></a>
+        <a class="nav-item" data-page="servicos" href="servicos.html"><i class="fa-solid fa-scissors"></i><span class="nav-text">Serviços</span></a>
+        <a class="nav-item" data-page="relatorios" href="relatorios.html"><i class="fa-solid fa-chart-column"></i><span class="nav-text">Relatórios</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Gestão</span>
+        <a class="nav-item" data-page="equipe" href="equipe.html"><i class="fa-solid fa-users-gear"></i><span class="nav-text">Usuários e Equipe</span></a>
+        <a class="nav-item" data-page="assinatura" href="assinatura.html"><i class="fa-solid fa-credit-card"></i><span class="nav-text">Plano e Assinatura</span></a>
+        <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Configurações</span>
+        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
+        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
+        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Conta</span>
+        <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Plataforma</span>
+        <a class="nav-item" data-page="admin" href="admin.html"><i class="fa-solid fa-gauge"></i><span class="nav-text">Painel Admin</span></a>
+        <a class="nav-item" data-page="admin-assinaturas" href="admin-assinaturas.html"><i class="fa-solid fa-rotate"></i><span class="nav-text">Assinaturas</span></a>
+        <a class="nav-item" data-page="admin-billing" href="admin-billing.html"><i class="fa-solid fa-file-invoice-dollar"></i><span class="nav-text">Preços e Invoices</span></a>
+        <a class="nav-item" data-page="admin-relatorios" href="admin-relatorios.html"><i class="fa-solid fa-chart-pie"></i><span class="nav-text">Relatórios da plataforma</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="plan-mini-card">
+        <div class="plan-mini-head"><i class="fa-solid fa-crown text-primary"></i> Plano Professional <span class="tag">PRO</span></div>
+        <div class="meter"><span style="width:53%"></span></div>
+        <small>8 de 15 módulos ativos</small>
+        <a href="assinatura.html" class="btn btn-primary btn-sm btn-block">Gerenciar plano</a>
+      </div>
+      <a class="tenant-switcher" href="selecionar-empresa.html">
+        <span class="brand-mark">CS</span>
+        <span><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" data-action="toggle-sidebar" aria-label="Alternar menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass lead"></i>
+        <input type="text" placeholder="Buscar clientes, atendimentos, agendamentos…" aria-label="Buscar">
+        <span class="kbd">Ctrl K</span>
+      </div>
+      <div class="topbar-right">
+        <a href="selecionar-empresa.html" class="topbar-tenant">
+          <span class="brand-mark">CS</span>
+          <span class="who"><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <button class="topbar-icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i><span class="count">5</span></button>
+        <button class="topbar-icon-btn" aria-label="Ajuda"><i class="fa-regular fa-circle-question"></i></button>
+        <div class="dropdown">
+          <button class="topbar-user" data-dropdown-toggle="userMenu">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Perfil">
+            <span class="who"><strong>Kelson Silva</strong><span>Administrador</span></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" id="userMenu">
+            <a href="perfil.html"><i class="fa-regular fa-user"></i> Meu perfil</a>
+            <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-body">
+
+      <div class="page-header">
+        <div><h1>Bom dia, Kelson! 👋</h1><p>Aqui está o resumo da sua empresa hoje.</p></div>
+        <div class="actions"><button class="btn btn-primary"><i class="fa-solid fa-sliders"></i> Personalizar dashboard</button></div>
+      </div>
+
+      <div class="two-col" style="grid-template-columns: 1fr 340px; align-items: start;">
+        <div class="stack">
+          <div class="kpi-grid" style="margin-bottom:0;">
+            <div class="kpi-card"><div class="kpi-top"><div><div class="kpi-label">Receita do mês</div><div class="kpi-value">R$ 32.450,00</div><div class="kpi-delta up"><i class="fa-solid fa-arrow-up"></i> 12,5% <span class="vs">vs mês anterior</span></div></div><span class="kpi-icon tone-purple"><i class="fa-solid fa-dollar-sign"></i></span></div><div class="kpi-spark"><canvas id="sparkReceita"></canvas></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div><div class="kpi-label">Clientes ativos</div><div class="kpi-value">248</div><div class="kpi-delta up"><i class="fa-solid fa-arrow-up"></i> 8,2% <span class="vs">vs mês anterior</span></div></div><span class="kpi-icon tone-blue"><i class="fa-solid fa-user-group"></i></span></div><div class="kpi-spark"><canvas id="sparkClientes"></canvas></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div><div class="kpi-label">Atendimentos</div><div class="kpi-value">156</div><div class="kpi-delta up"><i class="fa-solid fa-arrow-up"></i> 15,3% <span class="vs">vs mês anterior</span></div></div><span class="kpi-icon tone-green"><i class="fa-regular fa-calendar-check"></i></span></div><div class="kpi-spark"><canvas id="sparkAtend"></canvas></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div><div class="kpi-label">Pendências</div><div class="kpi-value">12</div><div class="kpi-delta down"><i class="fa-solid fa-arrow-down"></i> 3,1% <span class="vs">vs mês anterior</span></div></div><span class="kpi-icon tone-orange"><i class="fa-solid fa-circle-exclamation"></i></span></div><div class="kpi-spark"><canvas id="sparkPend"></canvas></div></div>
+          </div>
+
+          <div class="two-col">
+            <div class="card">
+              <div class="d-flex justify-between align-center mb-4"><h2 class="section-title" style="margin:0;">Evolução Financeira</h2><select class="select-control"><option>Este ano</option><option>Últimos 6 meses</option></select></div>
+              <div style="height:260px;"><canvas id="chartEvolucao"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="d-flex justify-between align-center mb-4"><h2 class="section-title" style="margin:0;">Atividades Recentes</h2><a href="relatorios.html" class="btn-link">Ver todas</a></div>
+              <ul class="activity-list">
+                <li><img class="table-avatar" src="https://i.pravatar.cc/80?img=32" alt=""><div class="who"><strong>João Pereira</strong><span>Novo atendimento criado</span></div><span class="badge badge-purple">Atendimento</span><span class="time">09:32</span></li>
+                <li><img class="table-avatar" src="https://i.pravatar.cc/80?img=45" alt=""><div class="who"><strong>Maria Souza</strong><span>Pagamento recebido · R$ 250,00</span></div><span class="badge badge-success">Financeiro</span><span class="time">09:15</span></li>
+                <li><span class="avatar-initials">AS</span><div class="who"><strong>Ana Silva</strong><span>Cliente atualizado</span></div><span class="badge badge-info">Cliente</span><span class="time">08:45</span></li>
+                <li><span class="avatar-initials">RS</span><div class="who"><strong>Roberto Santos</strong><span>Despesa registrada · R$ 80,00</span></div><span class="badge badge-danger">Financeiro</span><span class="time">08:30</span></li>
+                <li><span class="avatar-initials">LA</span><div class="who"><strong>Lucas Almeida</strong><span>Agendamento alterado</span></div><span class="badge badge-purple">Agenda</span><span class="time">08:10</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="d-flex justify-between align-center mb-4"><h2 class="section-title" style="margin:0;">Próximos Agendamentos</h2><a href="agenda.html" class="btn-link">Ver agenda completa</a></div>
+            <div class="appt-strip">
+              <div class="appt-mini"><div class="h">09:00</div><div class="d">Hoje</div><div class="p"><img class="table-avatar" src="https://i.pravatar.cc/80?img=5" alt="">Maria Oliveira</div><small>Consulta de retorno</small><div class="mt-3"><span class="badge badge-neutral">Consultório 1</span></div></div>
+              <div class="appt-mini"><div class="h">10:30</div><div class="d">Hoje</div><div class="p"><img class="table-avatar" src="https://i.pravatar.cc/80?img=15" alt="">José da Silva</div><small>Avaliação</small><div class="mt-3"><span class="badge badge-neutral">Consultório 2</span></div></div>
+              <div class="appt-mini"><div class="h">14:00</div><div class="d">Hoje</div><div class="p"><img class="table-avatar" src="https://i.pravatar.cc/80?img=9" alt="">Fernanda Lima</div><small>Procedimento</small><div class="mt-3"><span class="badge badge-neutral">Sala 3</span></div></div>
+              <div class="appt-mini"><div class="h">15:30</div><div class="d">Hoje</div><div class="p"><img class="table-avatar" src="https://i.pravatar.cc/80?img=25" alt="">Carlos Alberto</div><small>Consulta</small><div class="mt-3"><span class="badge badge-neutral">Consultório 1</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <h2 class="section-title">Atalhos Rápidos</h2>
+            <div class="quick-grid">
+              <a href="agenda.html" class="quick-item"><i class="fa-solid fa-calendar-plus"></i><span>Novo Agendamento</span></a>
+              <a href="clientes.html" class="quick-item"><i class="fa-solid fa-user-plus"></i><span>Novo Cliente</span></a>
+              <a href="assinatura.html" class="quick-item"><i class="fa-solid fa-hand-holding-dollar"></i><span>Lançar Receita</span></a>
+              <a href="assinatura.html" class="quick-item"><i class="fa-solid fa-circle-minus"></i><span>Nova Despesa</span></a>
+              <a href="equipe.html" class="quick-item"><i class="fa-solid fa-paper-plane"></i><span>Enviar Mensagem</span></a>
+              <a href="relatorios.html" class="quick-item"><i class="fa-solid fa-chart-simple"></i><span>Ver Relatórios</span></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="d-flex justify-between align-center mb-4"><h2 class="section-title" style="margin:0;">Resumo Financeiro</h2><select class="select-control"><option>Este mês</option></select></div>
+            <div class="stack" style="gap:var(--space-3);">
+              <div class="d-flex justify-between"><span class="text-muted">Receitas</span><strong class="text-success">R$ 32.450,00</strong></div>
+              <div class="d-flex justify-between"><span class="text-muted">Despesas</span><strong class="text-danger">R$ 18.230,00</strong></div>
+              <hr class="rule">
+              <div class="d-flex justify-between"><span>Lucro líquido</span><strong class="text-success">R$ 14.220,00</strong></div>
+            </div>
+            <a href="relatorios.html" class="btn-link mt-4" style="display:inline-block;">Ver relatório completo →</a>
+          </div>
+          <div class="card">
+            <h2 class="section-title">Uso de Módulos</h2>
+            <div class="d-flex align-center gap-3">
+              <div style="position:relative; width:110px; height:110px;">
+                <canvas id="chartModulos"></canvas>
+                <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><strong style="font-size:1.1rem;">8/15</strong><span class="text-muted" style="font-size:var(--fs-xs);">ativos</span></div>
+              </div>
+              <ul style="flex:1; font-size:var(--fs-sm);">
+                <li class="d-flex justify-between mb-3"><span><i class="fa-solid fa-circle text-success" style="font-size:8px;"></i> Ativos</span><strong>8</strong></li>
+                <li class="d-flex justify-between mb-3"><span><i class="fa-solid fa-circle" style="color:#E7E9F2; font-size:8px;"></i> Disponíveis</span><strong>7</strong></li>
+                <li class="d-flex justify-between"><span><i class="fa-solid fa-circle" style="color:#B0B4C6; font-size:8px;"></i> Limite do plano</span><strong>15</strong></li>
+              </ul>
+            </div>
+            <a href="assinatura.html" class="btn-link mt-4" style="display:inline-block;">Gerenciar módulos →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

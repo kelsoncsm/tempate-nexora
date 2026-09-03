@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar conta · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="auth-page" data-page="cadastro">
+
+  <main class="auth-card" role="main">
+    <div class="auth-brand">
+      <span class="brand-mark">N</span>
+      <div class="t"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+
+    <div class="auth-heading">
+      <h1>Criar sua conta</h1>
+      <p>Leva menos de um minuto para começar.</p>
+    </div>
+
+    <form id="signupForm" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="email">E-mail</label>
+        <div class="input-icon-wrap">
+          <i class="fa-regular fa-envelope"></i>
+          <input class="form-control" type="email" id="email" placeholder="voce@empresa.com.br" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="senha">Senha</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input class="form-control" type="password" id="senha" placeholder="••••••••••••" required>
+          <button type="button" class="toggle-visibility" aria-label="Mostrar senha" data-action="toggle-password"><i class="fa-regular fa-eye"></i></button>
+        </div>
+        <p class="form-hint">Use pelo menos 12 caracteres.</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
+    </form>
+
+    <div class="auth-foot">Já tem uma conta? <a href="../index.html">Fazer login</a></div>
+    <p class="auth-note">14 dias grátis, sem cartão</p>
+  </main>
+
+<script src="../assets/js/app.js"></script>
+<script>
+  document.getElementById('signupForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    window.location.href = 'onboarding.html';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empresa · Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-page="empresa">
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">N</span>
+      <div class="sidebar-brand-text"><strong>NEXORA</strong><span>Plataforma MultiNicho</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <span class="nav-label">Principal</span>
+        <a class="nav-item" data-page="dashboard" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span class="nav-text">Visão Geral</span></a>
+        <a class="nav-item" data-page="agenda" href="agenda.html"><i class="fa-regular fa-calendar-days"></i><span class="nav-text">Agenda</span></a>
+        <a class="nav-item" data-page="clientes" href="clientes.html"><i class="fa-solid fa-user-group"></i><span class="nav-text">Clientes</span></a>
+        <a class="nav-item" data-page="profissionais" href="profissionais.html"><i class="fa-solid fa-user-tie"></i><span class="nav-text">Profissionais</span></a>
+        <a class="nav-item" data-page="servicos" href="servicos.html"><i class="fa-solid fa-scissors"></i><span class="nav-text">Serviços</span></a>
+        <a class="nav-item" data-page="relatorios" href="relatorios.html"><i class="fa-solid fa-chart-column"></i><span class="nav-text">Relatórios</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Gestão</span>
+        <a class="nav-item" data-page="equipe" href="equipe.html"><i class="fa-solid fa-users-gear"></i><span class="nav-text">Usuários e Equipe</span></a>
+        <a class="nav-item" data-page="assinatura" href="assinatura.html"><i class="fa-solid fa-credit-card"></i><span class="nav-text">Plano e Assinatura</span></a>
+        <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Configurações</span>
+        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
+        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
+        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Conta</span>
+        <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label">Plataforma</span>
+        <a class="nav-item" data-page="admin" href="admin.html"><i class="fa-solid fa-gauge"></i><span class="nav-text">Painel Admin</span></a>
+        <a class="nav-item" data-page="admin-assinaturas" href="admin-assinaturas.html"><i class="fa-solid fa-rotate"></i><span class="nav-text">Assinaturas</span></a>
+        <a class="nav-item" data-page="admin-billing" href="admin-billing.html"><i class="fa-solid fa-file-invoice-dollar"></i><span class="nav-text">Preços e Invoices</span></a>
+        <a class="nav-item" data-page="admin-relatorios" href="admin-relatorios.html"><i class="fa-solid fa-chart-pie"></i><span class="nav-text">Relatórios da plataforma</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="plan-mini-card">
+        <div class="plan-mini-head"><i class="fa-solid fa-crown text-primary"></i> Plano Professional <span class="tag">PRO</span></div>
+        <div class="meter"><span style="width:53%"></span></div>
+        <small>8 de 15 módulos ativos</small>
+        <a href="assinatura.html" class="btn btn-primary btn-sm btn-block">Gerenciar plano</a>
+      </div>
+      <a class="tenant-switcher" href="selecionar-empresa.html">
+        <span class="brand-mark">CS</span>
+        <span><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" data-action="toggle-sidebar" aria-label="Alternar menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div class="topbar-search">
+        <i class="fa-solid fa-magnifying-glass lead"></i>
+        <input type="text" placeholder="Buscar clientes, atendimentos, agendamentos…" aria-label="Buscar">
+        <span class="kbd">Ctrl K</span>
+      </div>
+      <div class="topbar-right">
+        <a href="selecionar-empresa.html" class="topbar-tenant">
+          <span class="brand-mark">CS</span>
+          <span class="who"><strong>Clínica Sorriso</strong><span>Unidade Matriz</span></span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <button class="topbar-icon-btn" aria-label="Notificações"><i class="fa-regular fa-bell"></i><span class="count">5</span></button>
+        <button class="topbar-icon-btn" aria-label="Ajuda"><i class="fa-regular fa-circle-question"></i></button>
+        <div class="dropdown">
+          <button class="topbar-user" data-dropdown-toggle="userMenu">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Perfil">
+            <span class="who"><strong>Kelson Silva</strong><span>Administrador</span></span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" id="userMenu">
+            <a href="perfil.html"><i class="fa-regular fa-user"></i> Meu perfil</a>
+            <a href="configuracoes.html"><i class="fa-solid fa-gear"></i> Configurações</a>
+            <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-body">
+
+      <div class="page-header">
+        <div><h1>Empresa</h1><p>Dados cadastrais da empresa ativa.</p></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-heading"><i class="fa-solid fa-building"></i> Identificação</div>
+          <div class="form-group"><label class="form-label">Nome da empresa</label><input class="form-control" value="Clínica Sorriso"></div>
+          <div class="form-group"><label class="form-label">Fuso horário (IANA)</label><input class="form-control" value="America/Sao_Paulo" list="zonas"><datalist id="zonas"><option value="America/Sao_Paulo"></option><option value="America/Manaus"></option><option value="America/Recife"></option></datalist><p class="form-hint">Aplicado a agenda, relatórios e comunicações.</p></div>
+          <div class="form-actions"><span></span><button class="btn btn-primary">Salvar alterações</button></div>
+        </div>
+
+        <div class="card">
+          <div class="card-heading"><i class="fa-solid fa-circle-info"></i> Informações do sistema</div>
+          <div class="defs">
+            <dt>Endereço público</dt><dd>/t/clinica-sorriso</dd>
+            <dt>Slug</dt><dd>clinica-sorriso</dd>
+            <dt>Status</dt><dd><span class="badge badge-success">Ativa</span></dd>
+            <dt>Criada em</dt><dd>12/01/2026</dd>
+            <dt>Identificador</dt><dd class="mono">8f3a91c2-1853-43b8-8150-8a543e902d0e</dd>
+          </div>
+          <p class="form-hint mt-4">O slug e a titularidade não são editáveis aqui. Plano e assinatura ficam em <b>Plano e Assinatura</b>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>
