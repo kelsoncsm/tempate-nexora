@@ -114,6 +114,14 @@
         });
       });
     });
+
+    // Botões fora da nav que saltam para um painel (ex.: ação numa tabela)
+    document.querySelectorAll('[data-subnav-goto]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = document.querySelector('[data-subnav-target="' + btn.getAttribute('data-subnav-goto') + '"]');
+        if (item) item.click();
+      });
+    });
   }
 
   function initPasswordToggles() {

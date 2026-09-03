@@ -35,12 +35,6 @@
         <a class="nav-item" data-page="configuracoes" href="configuracoes.html"><i class="fa-solid fa-sliders"></i><span class="nav-text">Configurações</span></a>
       </div>
       <div class="nav-group">
-        <span class="nav-label">Configurações</span>
-        <a class="nav-item" data-page="empresa" href="empresa.html"><i class="fa-solid fa-building"></i><span class="nav-text">Empresa</span></a>
-        <a class="nav-item" data-page="perfis" href="perfis.html"><i class="fa-solid fa-shield-halved"></i><span class="nav-text">Perfis e Papéis</span></a>
-        <a class="nav-item" data-page="permissoes" href="permissoes.html"><i class="fa-solid fa-lock"></i><span class="nav-text">Permissões</span></a>
-      </div>
-      <div class="nav-group">
         <span class="nav-label">Conta</span>
         <a class="nav-item" data-page="perfil" href="perfil.html"><i class="fa-solid fa-user"></i><span class="nav-text">Meu Perfil</span></a>
       </div>
@@ -102,23 +96,138 @@
     <div class="page-body">
 
       <div class="page-header">
-        <div><h1>Configurações</h1><p>Central de ajustes da sua empresa e da sua conta.</p></div>
+        <div><h1>Configurações</h1><p>Empresa, papéis de acesso e permissões da equipe.</p></div>
       </div>
 
-      <div class="hub-section">
-        <h2 class="hub-section-title">Empresa</h2>
-        <div class="hub-grid">
-          <a class="hub-card" href="empresa.html"><span class="hub-icon"><i class="fa-solid fa-building"></i></span><strong>Empresa</strong><span>Nome, fuso horário e dados cadastrais.</span><span class="hub-go">Abrir <i class="fa-solid fa-chevron-right"></i></span></a>
-          <a class="hub-card" href="perfis.html"><span class="hub-icon"><i class="fa-solid fa-shield-halved"></i></span><strong>Perfis e Papéis</strong><span>Defina os papéis de acesso da equipe.</span><span class="hub-go">Abrir <i class="fa-solid fa-chevron-right"></i></span></a>
-          <a class="hub-card" href="permissoes.html"><span class="hub-icon"><i class="fa-solid fa-lock"></i></span><strong>Permissões</strong><span>Ajuste o que cada papel pode fazer.</span><span class="hub-go">Abrir <i class="fa-solid fa-chevron-right"></i></span></a>
+      <div class="settings-grid" data-subnav>
+        <div class="card-flat settings-nav">
+          <div class="settings-nav-item active" data-subnav-target="empresa"><i class="fa-solid fa-building"></i> Empresa</div>
+          <div class="settings-nav-item" data-subnav-target="perfis"><i class="fa-solid fa-shield-halved"></i> Perfis e Papéis</div>
+          <div class="settings-nav-item" data-subnav-target="permissoes"><i class="fa-solid fa-lock"></i> Permissões</div>
+        </div>
+
+        <div>
+          <!-- Empresa -->
+          <div class="card" data-subnav-panel="empresa">
+            <h3 class="section-title">Dados da empresa</h3>
+            <form>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Nome da empresa</label><input class="form-control" value="Clínica Sorriso"></div>
+                <div class="form-group">
+                  <label class="form-label">Fuso horário (IANA)</label>
+                  <input class="form-control" value="America/Sao_Paulo" list="zonas">
+                  <datalist id="zonas"><option value="America/Sao_Paulo"></option><option value="America/Manaus"></option><option value="America/Recife"></option></datalist>
+                  <p class="form-hint">Aplicado a agenda, relatórios e comunicações.</p>
+                </div>
+              </div>
+              <div class="defs" style="border-top:1px solid var(--color-border); margin-top:var(--space-4); padding-top:var(--space-4);">
+                <dt>Endereço público</dt><dd>/t/clinica-sorriso</dd>
+                <dt>Slug</dt><dd>clinica-sorriso</dd>
+                <dt>Status</dt><dd><span class="badge badge-success">Ativa</span></dd>
+                <dt>Criada em</dt><dd>12/01/2026</dd>
+                <dt>Identificador</dt><dd class="mono">8f3a91c2-1853-43b8-8150-8a543e902d0e</dd>
+              </div>
+              <p class="form-hint mt-4">O slug e a titularidade não são editáveis aqui. Plano e assinatura ficam em <b>Plano e Assinatura</b>.</p>
+              <div class="form-actions"><span></span><button type="submit" class="btn btn-primary">Salvar alterações</button></div>
+            </form>
+          </div>
+
+          <!-- Perfis e Papéis -->
+          <div class="card" data-subnav-panel="perfis" style="display:none;">
+            <div class="perm-head" style="justify-content:space-between;">
+              <h3 class="section-title" style="margin:0;">Perfis e Papéis</h3>
+              <button class="btn btn-primary btn-sm" data-modal-open="modalPapel"><i class="fa-solid fa-plus"></i> Novo papel</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Papel</th><th>Membros</th><th>Permissões</th><th>Tipo</th><th><span class="sr-only">Ações</span></th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Papel"><strong>ADMIN</strong><br><span class="text-muted">Acesso total à empresa</span></td><td data-label="Membros">1</td><td data-label="Permissões">17</td><td data-label="Tipo"><span class="badge badge-info">Sistema</span></td><td class="actions"><button class="btn-icon-circle" data-subnav-goto="permissoes" aria-label="Permissões"><i class="fa-solid fa-lock"></i></button></td></tr>
+                  <tr><td data-label="Papel"><strong>Gerente</strong><br><span class="text-muted">Operação completa sem administração</span></td><td data-label="Membros">1</td><td data-label="Permissões">13</td><td data-label="Tipo"><span class="badge badge-neutral">Personalizado</span></td><td class="actions"><button class="btn-icon-circle" data-subnav-goto="permissoes" aria-label="Permissões"><i class="fa-solid fa-lock"></i></button><button class="btn-icon-circle" data-modal-open="modalPapel" aria-label="Editar"><i class="fa-solid fa-pen"></i></button></td></tr>
+                  <tr><td data-label="Papel"><strong>Recepção</strong><br><span class="text-muted">Agenda e clientes</span></td><td data-label="Membros">2</td><td data-label="Permissões">9</td><td data-label="Tipo"><span class="badge badge-neutral">Personalizado</span></td><td class="actions"><button class="btn-icon-circle" data-subnav-goto="permissoes" aria-label="Permissões"><i class="fa-solid fa-lock"></i></button><button class="btn-icon-circle" data-modal-open="modalPapel" aria-label="Editar"><i class="fa-solid fa-pen"></i></button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="count-hint">O papel de sistema (ADMIN) não pode ser renomeado nem excluído. Papéis não podem ser removidos enquanto tiverem membros.</p>
+          </div>
+
+          <!-- Permissões -->
+          <div class="card" data-subnav-panel="permissoes" style="display:none;">
+            <div class="form-group" style="max-width:360px;">
+              <label class="form-label">Papel</label>
+              <select class="form-control"><option>Gerente</option><option>Recepção</option><option>ADMIN (sistema)</option></select>
+            </div>
+            <div class="perm-head">
+              <h3 class="section-title" style="margin:0;">Gerente</h3>
+              <span class="text-muted" style="font-size:var(--fs-sm);">13 de 17 permissões</span>
+            </div>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox" checked> <b>Clientes</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox" checked> Ver <code>customers.read</code></label>
+                <label><input type="checkbox" checked> Criar <code>customers.create</code></label>
+                <label><input type="checkbox" checked> Editar <code>customers.update</code></label>
+                <label><input type="checkbox" checked> Excluir <code>customers.delete</code></label>
+              </div>
+            </fieldset>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox" checked> <b>Profissionais</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox" checked> Ver <code>professionals.read</code></label>
+                <label><input type="checkbox" checked> Criar <code>professionals.create</code></label>
+                <label><input type="checkbox" checked> Editar <code>professionals.update</code></label>
+                <label><input type="checkbox" checked> Excluir <code>professionals.delete</code></label>
+              </div>
+            </fieldset>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox" checked> <b>Serviços</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox" checked> Ver <code>services.read</code></label>
+                <label><input type="checkbox" checked> Criar <code>services.create</code></label>
+                <label><input type="checkbox" checked> Editar <code>services.update</code></label>
+                <label><input type="checkbox" checked> Excluir <code>services.delete</code></label>
+              </div>
+            </fieldset>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox" checked> <b>Agenda</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox" checked> Ver <code>appointments.read</code></label>
+                <label><input type="checkbox" checked> Criar <code>appointments.create</code></label>
+                <label><input type="checkbox" checked> Atualizar <code>appointments.update</code></label>
+                <label><input type="checkbox" checked> Cancelar <code>appointments.cancel</code></label>
+              </div>
+            </fieldset>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox"> <b>Relatórios</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox"> Ver <code>reports.read</code></label>
+              </div>
+            </fieldset>
+            <fieldset class="perm-group">
+              <legend><label class="checkbox-row"><input type="checkbox"> <b>Administração</b></label></legend>
+              <div class="perm-items">
+                <label><input type="checkbox"> Gerenciar empresa <code>tenant.manage</code></label>
+              </div>
+            </fieldset>
+            <div class="form-actions">
+              <button class="btn btn-secondary">Desfazer</button>
+              <button class="btn btn-primary">Salvar permissões</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hub-section">
-        <h2 class="hub-section-title">Conta</h2>
-        <div class="hub-grid">
-          <a class="hub-card" href="perfil.html"><span class="hub-icon"><i class="fa-solid fa-user"></i></span><strong>Meu Perfil</strong><span>Seus dados de acesso ao Nexora.</span><span class="hub-go">Abrir <i class="fa-solid fa-chevron-right"></i></span></a>
-          <a class="hub-card" href="assinatura.html"><span class="hub-icon"><i class="fa-solid fa-credit-card"></i></span><strong>Plano e Assinatura</strong><span>Cobranças e limites do plano.</span><span class="hub-go">Abrir <i class="fa-solid fa-chevron-right"></i></span></a>
+      <div class="modal-overlay" id="modalPapel">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Novo papel</h3><button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="modal-body">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">Nome</label><input class="form-control" placeholder="Ex.: Financeiro"></div>
+              <div class="form-group"><label class="form-label">Descrição</label><input class="form-control" placeholder="Breve"></div>
+            </div>
+            <p class="form-hint">As permissões do papel são definidas na aba <b>Permissões</b> após a criação.</p>
+          </div>
+          <div class="modal-footer"><button class="btn btn-secondary" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Salvar</button></div>
         </div>
       </div>
 
